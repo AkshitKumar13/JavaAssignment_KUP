@@ -73,30 +73,30 @@ catch(Exception e){
             if (token_no == 10) {
                 System.out.println("please collect Your Order" + order);
                 Thread.sleep(2000);
-                System.out.println("You have paid Rs" + cost + " for Your Order" + "\n" + "Welcome Agian!");
+                System.out.println("You have paid Rs" + cost + " for Your Order" + "\n" + "Thankyou Welcome Agian!");
             }
             if (token_no == 20) {
                 System.out.println("please collect Your Order" + order);
                 Thread.sleep(2000);
-                System.out.println("You have paid Rs" + cost + " for Your Order" + "\n" + "Welcome Agian!");
+                System.out.println("You have paid Rs" + cost + " for Your Order" + "\n" + "Thankyou Welcome Agian!");
 
             }
             if (token_no == 30) {
                 System.out.println("please collect Your Order" + order);
                 Thread.sleep(2000);
-                System.out.println("You have paid Rs" + cost + " for Your Order" + "\n" + "Welcome Agian!");
+                System.out.println("You have paid Rs" + cost + " for Your Order" + "\n" + "Thankyou Welcome Agian!");
 
             }
             if (token_no == 40) {
                 System.out.println("please collect Your Order" + order);
                 Thread.sleep(2000);
-                System.out.println("You have paid Rs" + cost + " for Your Order" + "\n" + "Welcome Agian!");
+                System.out.println("You have paid Rs" + cost + " for Your Order" + "\n" + "Thankyou Welcome Agian!");
 
             }
             if (token_no == 50) {
                 System.out.println("please collect Your Order :" + order);
                 Thread.sleep(2000);
-                System.out.println("You have paid Rs" + cost + " for Your Order" + "\n" + "Welcome Agian!");
+                System.out.println("You have paid Rs" + cost + " for Your Order" + "\n" + "Thankyou Welcome Agian!");
             }
         }
         catch(Exception e){
@@ -121,7 +121,7 @@ class Main {
             coffeShop.Barista();
 
 
-            System.out.println("Do you want to select next option(y/n)");
+            System.out.println("Do you want to continue(y/n)");
             wantToExit = sc.next().charAt(0);
 
         }
