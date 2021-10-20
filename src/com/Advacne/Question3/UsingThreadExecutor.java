@@ -3,14 +3,20 @@ package com.Advacne.Question3;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+
+//Use a singleThreadExecutor to submit multiple threads.
+//   Try shutdown() and shutdownNow() and observe the difference.
+//    Use isShutDown() and isTerminated() with ExecutorService.
+
+
+
+
+
   class UsingThreadExecutor implements Runnable{
-
-
-
-
     private String name;
 
     public  UsingThreadExecutor(String name) {
+
         this.name = name;
     }
 
@@ -46,7 +52,7 @@ class SecondThread{
  class SingleThreadPool {
     public static void main(String[] args) {
         // Step No 1
-        ExecutorService executor = Executors.newSingleThreadExecutor();
+        ExecutorService executor = Executors.newSingleThreadExecutor();//using executor service
       //  for (int number = 0; number < 4; number++) {
             // Step No 2
             Runnable worker = new UsingThreadExecutor("MyTask " );
@@ -58,9 +64,10 @@ class SecondThread{
       //  }
         executor.execute(worker2);
         executor.shutdown();
-
+System.out.println(executor.isTerminated());
+executor.shutdownNow();
         // Waiting for all thread to finish
-        while (!executor.isTerminated()) ;
-        System.out.println("All threads finished");
+       while (!executor.isTerminated()) ;
+        System.out.println("All threads finished"+" "+executor.isTerminated());
     }
 }
