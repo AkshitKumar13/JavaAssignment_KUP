@@ -1,4 +1,4 @@
-package com.Core.Question18;
+package com.Core.Question18.part2;
 
 import java.util.ArrayList;
 import java.util.List;

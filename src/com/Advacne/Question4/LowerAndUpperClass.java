@@ -9,11 +9,11 @@ import java.util.Scanner;
 
 import static java.nio.file.StandardOpenOption.*;
 
-public class LowerAndUpperDisplay{
+public class LowerAndUpperClass{
     public static void main(String[]args){
         Scanner input=new Scanner(System.in);
         int studentID=0, credHrs=0, recordLength=0;
-        String name, surname, IDString="", credString="", fullEntry, selection;
+        String name, lastName, IDString="", credString="", fullEntry, selection;
         boolean b=false, done=false;
 
         String delimiter=",";
@@ -26,13 +26,10 @@ public class LowerAndUpperDisplay{
         upper=Paths.get("Upperclassmen.txt");
 
         try{
-            OutputStream lowStr=new BufferedOutputStream(Files.newOutputStream(lower,
-                    CREATE, WRITE));
-            BufferedWriter writeLower=new BufferedWriter(new OutputStreamWriter(
-                    lowStr));
+            OutputStream lowStr=new BufferedOutputStream(Files.newOutputStream(lower, CREATE, WRITE));
+            BufferedWriter writeLower=new BufferedWriter(new OutputStreamWriter(lowStr));
 
-            OutputStream upStr=new BufferedOutputStream(Files.newOutputStream(upper,
-                    CREATE, WRITE));
+            OutputStream upStr=new BufferedOutputStream(Files.newOutputStream(upper, CREATE, WRITE));
             BufferedWriter writeUpper=new BufferedWriter(new OutputStreamWriter(upStr));
 
             do{//master filewriting loop
@@ -63,10 +60,10 @@ public class LowerAndUpperDisplay{
                 name=nameFormat.toString();
 
                 System.out.print("Enter the student's last name > ");
-                surname=input.nextLine();//takes student name
-                nameFormat=new StringBuilder(surname);
+                lastName=input.nextLine();//takes student name
+                nameFormat=new StringBuilder(lastName);
                 nameFormat.setLength(10);
-                surname=nameFormat.toString();
+                lastName=nameFormat.toString();
 
                 b=false;
                 do{
@@ -87,7 +84,7 @@ public class LowerAndUpperDisplay{
                     }
                 }while(!b);//takes credit hours
 
-                fullEntry="ID "+IDString+delimiter+surname+delimiter+name+delimiter+
+                fullEntry="ID "+IDString+delimiter+lastName+delimiter+name+delimiter+
                         credString+" credits"+System.getProperty("line.separator");
 
                 if(recordLength==0)

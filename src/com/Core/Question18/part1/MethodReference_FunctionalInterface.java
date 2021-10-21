@@ -1,4 +1,4 @@
-package com.Core.Question18;
+package com.Core.Question18.part1;
 
 
 interface MethodRefInterface{
